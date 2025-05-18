@@ -30,14 +30,13 @@ public class merge_sort{
         List<String[]> dataToReturn = new ArrayList<>();
         BufferedReader reader = new BufferedReader(new FileReader(fileName));
         String line;
-        int i=0;
         // loop to see whether any next line is empty
         while((line=reader.readLine())!=null){
                 //store the value by split with "," example "123,Elson" become {"123","Elson"} 
                 String[] values = line.split(",");
                 // add into data
                 dataToReturn.add(values);
-            i++;
+
         }
         reader.close();
         //return data
