@@ -44,6 +44,7 @@ public class merge_sort_step {
             }
             i++;
         }
+        reader.close();
         //return data
         return dataToReturn;
 
@@ -106,7 +107,7 @@ public class merge_sort_step {
     public static void writeStepsToFile(String filename) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
         for (String step : steps) {
-            writer.write(step);
+            writer.write("["+step+"]");
             writer.newLine();
         }
         writer.close();
